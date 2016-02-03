@@ -91,6 +91,7 @@ public class Rep_list {
 	  List<WebElement> AdrDit =driver.findElements(By.xpath("//div[@class='rep-list-table-body']/ion-scroll/div[1]/div/div[1]/div[3]/div/div[2]/div/span[@class='rep-details rep-phone-prefix ng-binding']/span[2]")); //Address, lower row
 	  for(WebElement el : AdrDit) {
 	   System.out.print(el.getText() + " ");
+	   HELLO!
 	         }
 */	
 	}
