@@ -68,7 +68,7 @@ public class Dashboard {
 //	String other = driver.findElement(By.xpath("//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[2]/div")).getText();
 //	String all_recs = (fav + other);
 //	System.out.println(all_recs);
-	//JIIIIIII
+	
 	
 	//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[2]/div[1] - second element
 	//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[1]/div/p // user4 Favourites
