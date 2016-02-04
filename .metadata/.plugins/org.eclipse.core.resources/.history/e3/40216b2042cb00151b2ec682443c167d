@@ -66,13 +66,7 @@ public class Dashboard {
 
 	driver.findElement(By.xpath("//ion-content[@class='scroll-content ionic-scroll']/div[1]/div/span[5]")).click(); //select City icon
 	driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[3]/div[2]/div/div[1]/div/div/div[3]/span")).click(); //click on SortBy
-	
-	List<WebElement> SortBy =driver.findElements(By.xpath("//ion-content[@class='scroll-content ionic-scroll']/div[1]/div/span")); //The list of Sort By
-	for(WebElement el : SortBy) {
-	System.out.print(el.getText() + " ");
-		}
 	}
-	
 	
 	
 //	driver.findElement(By.xpath("//ion-content[@class='scroll-content ionic-scroll']/div[1]/div/span[6]")).click(); //select Creaing Date icon

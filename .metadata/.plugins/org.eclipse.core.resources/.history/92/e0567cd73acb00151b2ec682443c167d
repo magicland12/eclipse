@@ -38,12 +38,12 @@ public class Dashboard {
 	driver.switchTo().frame("frame_viewport");
 	
 	Wait(2000);
-/*	boolean title = driver.getTitle().equals("Mobile Preview");
+	boolean title = driver.getTitle().equals("Dashboard");
 		if(title)
 			System.out.println("I am working correctly");
 		else if(!title)
 			System.out.println("I am broken!");
-	*/	
+		
 	
 	driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[2]/div[1]/div/div[1]/div/div/div/span")).getText().contains("Goal Groups");
 	driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[3]/div[1]/div/div[1]/div/div/div/span")).getText().contains("Key Indicators");
@@ -67,23 +67,15 @@ public class Dashboard {
 	driver.findElement(By.xpath("//ion-content[@class='scroll-content ionic-scroll']/div[1]/div/span[5]")).click(); //select City icon
 	driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[3]/div[2]/div/div[1]/div/div/div[3]/span")).click(); //click on SortBy
 	
-	List<WebElement> SortBy =driver.findElements(By.xpath("//ion-content[@class='scroll-content ionic-scroll']/div[1]/div/span")); //The list of Sort By
-	for(WebElement el : SortBy) {
-	System.out.print(el.getText() + " ");
-		}
+	driver.findElement(By.xpath("//ion-content[@class='scroll-content ionic-scroll']/div[1]/div/span[6]")).click(); //select Creaing Date icon
+	driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[3]/div[2]/div/div[1]/div/div/div[3]/span")).click(); //click on SortBy
+	
+	driver.findElement(By.xpath("//ion-content[@class='scroll-content ionic-scroll']/div[1]/div/span[7]")).click(); //select Posting Date icon
+	driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[3]/div[2]/div/div[1]/div/div/div[3]/span")).click(); //click on SortBy
+	
+	
+	Wait(2000);
 	}
-	
-	
-	
-//	driver.findElement(By.xpath("//ion-content[@class='scroll-content ionic-scroll']/div[1]/div/span[6]")).click(); //select Creaing Date icon
-//	driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[3]/div[2]/div/div[1]/div/div/div[3]/span")).click(); //click on SortBy
-	
-//	driver.findElement(By.xpath("//ion-content[@class='scroll-content ionic-scroll']/div[1]/div/span[7]")).click(); //select Posting Date icon
-//	driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[3]/div[2]/div/div[1]/div/div/div[3]/span")).click(); //click on SortBy
-	
-	
-//	Wait(2000);
-	
 
 /*	
 		String fav =driver.findElement(By.xpath("//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[1]/div")).getText(); 
