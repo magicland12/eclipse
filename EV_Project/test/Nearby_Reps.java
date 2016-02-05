@@ -1,14 +1,11 @@
 package test;
 
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
-import org.junit.Before;
+import java.util.concurrent.TimeUnit;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Nearby_Reps {
@@ -20,7 +17,6 @@ public class Nearby_Reps {
 	public static void setUp() throws Exception {
 		
 		driver = new FirefoxDriver();
-		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}

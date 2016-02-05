@@ -1,19 +1,19 @@
 package test;
 
-import java.util.List;
+
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Before;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Menu {
 	private static FirefoxDriver driver;
 	private static String baseUrl= "http://appery.io/app/mobile-frame?src=http://appery.io/app/view/6e1b60d5-b6c2-4eba-809d-9ca98083d060&type=mobile";
-	private boolean acceptNextAlert = true;
+	
 
 	@BeforeClass
 	public static void setUp() throws Exception {

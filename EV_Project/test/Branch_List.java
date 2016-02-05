@@ -1,14 +1,14 @@
 package test;
 
-import java.util.List;
+
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Before;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Branch_List {

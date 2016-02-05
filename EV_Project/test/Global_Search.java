@@ -1,24 +1,24 @@
 package test;
 
-import java.util.List;
+
 import java.util.concurrent.TimeUnit;
 
-import org.apache.bcel.generic.Select;
-import org.junit.Before;
+
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import junit.framework.Assert;
+
 
 public class Global_Search {
 	private static FirefoxDriver driver;
 	private static String baseUrl= "http://appery.io/app/mobile-frame?src=http://appery.io/app/view/6e1b60d5-b6c2-4eba-809d-9ca98083d060&type=mobile";
 	//private static String baseUrl= "https://idp.appery.io/idp/";
-	private boolean acceptNextAlert = true;
+	
 
 	@BeforeClass
 	public static void setUp() throws Exception {
