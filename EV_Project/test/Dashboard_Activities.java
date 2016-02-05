@@ -44,7 +44,10 @@ public class Dashboard_Activities {
 
 	List<WebElement> List =driver.findElements(By.xpath("//div[@class='stratch-vertically']/div[2]/div[2]/div/div[2]/ion-scroll/div[1]/div[1]/div")); //save full 
 	 for(WebElement el : List) {
-	  System.out.print(el.getText()+ " ");
+	  System.out.print(Activity + " " + el.getText());}
+	 
+	 
+	 
 	//div[@class='stratch-vertically']/div[2]/div[2]/div/div[2]/ion-scroll/div[1]/div[1]/div
 	}
 	
