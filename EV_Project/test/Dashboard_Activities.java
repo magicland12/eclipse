@@ -1,13 +1,12 @@
 package test;
 
-
+import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
-
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Dashboard_Activities {
@@ -39,9 +38,14 @@ public class Dashboard_Activities {
 	driver.switchTo().frame("frame_viewport");
 	String Activity = driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[2]/div[2]/div/div[1]/div/div/div[1]/span")).getText(); //save Activity to the memory
 	driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[2]/div[2]/div/div[1]/div/div/div[2]/div/button[1]")).click(); // click 'Today' button
-	driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[2]/div[2]/div/div[1]/div/div/div[2]/div/button[2]")).click(); // click 'Today' button
+	driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[2]/div[2]/div/div[1]/div/div/div[2]/div/button[2]")).click(); // click 'This Week' button
+	driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[2]/div[2]/div/div[1]/div/div/div[2]/div/button[3]")).click(); // click 'This Month' button
+	driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[2]/div[2]/div/div[1]/div/div/div[2]/div/button[4]")).click(); // click 'All' button
 
-
+	List<WebElement> List =driver.findElements(By.xpath("//div[@class='stratch-vertically']/div[2]/div[2]/div/div[2]/ion-scroll/div[1]/div[1]/div")); //save full 
+	 for(WebElement el : List) {
+	  System.out.print(el.getText()+ " ");
+	//div[@class='stratch-vertically']/div[2]/div[2]/div/div[2]/ion-scroll/div[1]/div[1]/div
 	}
 	
 	

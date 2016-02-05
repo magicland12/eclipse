@@ -2,9 +2,12 @@ package test;
 
 
 import java.util.concurrent.TimeUnit;
+
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Menu {
@@ -14,8 +17,9 @@ public class Menu {
 
 	@BeforeClass
 	public static void setUp() throws Exception {
-	
-		driver = new FirefoxDriver();		
+		// driver = new ChromeDriver();
+		driver = new FirefoxDriver();
+		// driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
