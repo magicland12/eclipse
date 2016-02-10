@@ -8,6 +8,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import org.junit.Assert;
+
+
+
+
 
 
 public class SearchWithinFirms {
@@ -57,11 +62,19 @@ public class SearchWithinFirms {
 	driver.findElement(By.xpath("//div[@class='g-search-grid']/div[5]/div/div[1]/div/div[6]")).click();//click 1-st sorting tab
 	driver.findElement(By.xpath("//div[@class='g-search-grid']/div[5]/div/div[1]/div/div[6]")).click();//click 1-st sorting tab
 	driver.findElement(By.xpath("//div[@class='g-search-grid']/div[5]/div/div[1]/div/div[7]")).click();//click 1-st sorting tab
+	
+	
+	
 	String firms = driver.findElement(By.xpath("//div[@class='row no-padding list-table-container']/div/div[2]/ion-scroll/div[1]/div[1]/div[1]")).getText(); // сохраняем первую строку Firms
 	
 	String text = driver.findElement(By.xpath("//div[@class='col g-search-tabs-container']")).getText(); // сохраняем Reps, Branches, Firms, Activities, Library
 	//String branches = driver.findElement(By.xpath("//div[@class='scroll']/div[@class='my-list-item'][1]/div")).getText(); // сохраняем первую строку Branches 
 	System.out.println(text + "\n"+"\n" + firms + "\n"+"\n"); //выводим все 3 поля в консоли
+	
+	
+	String firm_searching_result = driver.findElement(By.xpath("//div[@class='row no-padding list-table-container']/div/div[2]/ion-scroll/div[1]/div[1]/div[1]/div[1]/span")).getText();
+	
+	Assert.assertEquals(firm_searching_result, "Morgan Stanley");
 	
 	}
 	 
