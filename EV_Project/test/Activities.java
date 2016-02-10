@@ -7,9 +7,12 @@ import java.util.concurrent.TimeUnit;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import login_other.ActivitySortSearchIcons;
+import login_other.LoginPage;
+import login_other.MainMenuSelect;
 
 public class Activities {
 	private static FirefoxDriver driver;
@@ -18,6 +21,7 @@ public class Activities {
 
 	@BeforeClass
 	public static void setUp() throws Exception {
+	
 		driver = new FirefoxDriver();		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
@@ -27,98 +31,99 @@ public class Activities {
 	public void test() throws Exception {
 		driver.get(baseUrl);
 		
-	driver.findElement(By.xpath("//form [@id='login_form']/div[1]//input")).sendKeys("amazur@exadel.com");
-	driver.findElement(By.xpath("//form [@id='login_form']/div[2]//input")).sendKeys("lavandos");	
-	driver.findElement(By.xpath("//input[@id='loginBtn']")).click();	
-	driver.findElement(By.xpath("//div[@id='mobile_sizes']/div[3]")).click();
-	driver.findElement(By.xpath("//div[@id='switch_to_landscape']")).click();
+		LoginPage login=new LoginPage(driver);
+		login.typeUserName();
+		login.typePassword();
+		login.clickLoginButton();
+		login.resize_frame();
+		login.landscape_orientation();		
 	
 	
 	
 	driver.switchTo().frame("frame_viewport");
-	driver.findElement(By.xpath("//ion-header-bar/div[1]/button[1]")).click();
+	MainMenuSelect menu=new MainMenuSelect(driver);
+	menu.MainMenu();
 	//menu is opened
+	ActivitySortSearchIcons navisearch=new ActivitySortSearchIcons(driver);
 	//Wait(2000);
 	driver.findElement(By.xpath("//ion-side-menu/div/ion-scroll/div[1]/div/a[6]")).click(); // activities page is opened
 	
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[1]/span")).click(); //click StartingTime
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[1]/span")).click(); //click StartingTime
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[2]/span")).click(); //click Priority
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[2]/span")).click(); //click Priority
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[3]/span")).click(); //click Subject
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[3]/span")).click(); //click Subject
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[4]/span")).click(); //click LOBs
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[4]/span")).click(); //click LOBs
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[5]/span")).click(); //click Products
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[5]/span")).click(); //click Products
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[6]/span")).click(); //click Meeting Topict
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[6]/span")).click(); //click Meeting Topict
+	navisearch.clickStartingTime();
+	navisearch.clickStartingTime();
+	navisearch.clickPriority();
+	navisearch.clickPriority();
+	navisearch.clickSubject();
+	navisearch.clickSubject();
+	navisearch.clickLOBs();
+	navisearch.clickLOBs();
+	navisearch.clickProducts();
+	navisearch.clickProducts();
+	navisearch.clickMeetingTopics();
 	Wait(2000);
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[1]/i")).click(); // click Starting Time sesarching icon
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[1]/label/input")).sendKeys("En" + Keys.ENTER);
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[2]/i")).click(); //close searching field
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[3]/i")).click(); // click Subject sesarching icon
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[1]/label/input")).sendKeys("Keegan" + Keys.ENTER);
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[2]/i")).click(); //close searching field
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[6]/i")).click(); // click Meeting topics searching field icon
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[1]/label/input")).sendKeys("meeting" + Keys.ENTER); //fill Meeting topics searching field
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[2]/i")).click(); //close searching field
-	
-	
+	navisearch.clickStartTimeSearchIcon();
+	navisearch.setkStartTimeSearchInput();
+	navisearch.clickCloseSearchField();
+	navisearch.clickSubjectSearchIcon();
+	navisearch.setSubjectSearchInput();
+	navisearch.clickCloseSearchField();
+	navisearch.clickMeetingTopicsSearchIcon();
+	navisearch.setkMeetingTopicsSearchInput();
+	navisearch.clickCloseSearchField();
+
 	
 	driver.findElement(By.xpath("//div[@class='col center-vertical-container list-table-title']/i")).click(); //click on List icon
 	driver.findElement(By.xpath("//body/div[3]/div/ion-popover-view/ion-content/div[1]/div/span[3]")).click(); // select This Week
 	
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[1]/span")).click(); //click StartingTime
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[1]/span")).click(); //click StartingTime
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[2]/span")).click(); //click Priority
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[2]/span")).click(); //click Priority
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[3]/span")).click(); //click Subject
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[3]/span")).click(); //click Subject
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[4]/span")).click(); //click LOBs
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[4]/span")).click(); //click LOBs
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[5]/span")).click(); //click Products
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[5]/span")).click(); //click Products
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[6]/span")).click(); //click Meeting Topict
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[6]/span")).click(); //click Meeting Topict
+	navisearch.clickStartingTime();
+	navisearch.clickStartingTime();
+	navisearch.clickPriority();
+	navisearch.clickPriority();
+	navisearch.clickSubject();
+	navisearch.clickSubject();
+	navisearch.clickLOBs();
+	navisearch.clickLOBs();
+	navisearch.clickProducts();
+	navisearch.clickProducts();
+	navisearch.clickMeetingTopics();
+	
 	Wait(2000);
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[1]/i")).click(); // click Starting Time sesarching icon
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[1]/label/input")).sendKeys("En" + Keys.ENTER);
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[2]/i")).click(); //close searching field
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[3]/i")).click(); // click Subject sesarching icon
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[1]/label/input")).sendKeys("Keegan" + Keys.ENTER);
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[2]/i")).click(); //close searching field
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[6]/i")).click(); // click Meeting topics searching field icon
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[1]/label/input")).sendKeys("meeting" + Keys.ENTER); //fill Meeting topics searching field
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[2]/i")).click(); //close searching field
+	navisearch.clickStartTimeSearchIcon();
+	navisearch.setkStartTimeSearchInput();
+	navisearch.clickCloseSearchField();
+	navisearch.clickSubjectSearchIcon();
+	navisearch.setSubjectSearchInput();
+	navisearch.clickCloseSearchField();
+	navisearch.clickMeetingTopicsSearchIcon();
+	navisearch.setkMeetingTopicsSearchInput();
+	navisearch.clickCloseSearchField();
 	
 	
 	driver.findElement(By.xpath("//div[@class='col center-vertical-container list-table-title']/i")).click(); //click on List icon
 	driver.findElement(By.xpath("//body/div[3]/div/ion-popover-view/ion-content/div[1]/div/span[4]")).click(); // Today
 	
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[1]/span")).click(); //click StartingTime
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[1]/span")).click(); //click StartingTime
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[2]/span")).click(); //click Priority
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[2]/span")).click(); //click Priority
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[3]/span")).click(); //click Subject
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[3]/span")).click(); //click Subject
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[4]/span")).click(); //click LOBs
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[4]/span")).click(); //click LOBs
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[5]/span")).click(); //click Products
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[5]/span")).click(); //click Products
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[6]/span")).click(); //click Meeting Topict
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[6]/span")).click(); //click Meeting Topict
-	Wait(2000);
+	navisearch.clickStartingTime();
+	navisearch.clickStartingTime();
+	navisearch.clickPriority();
+	navisearch.clickPriority();
+	navisearch.clickSubject();
+	navisearch.clickSubject();
+	navisearch.clickLOBs();
+	navisearch.clickLOBs();
+	navisearch.clickProducts();
+	navisearch.clickProducts();
+	navisearch.clickMeetingTopics();
 	
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[1]/i")).click(); // click Starting Time sesarching icon
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[1]/label/input")).sendKeys("En" + Keys.ENTER);
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[2]/i")).click(); //close searching field
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[3]/i")).click(); // click Subject sesarching icon
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[1]/label/input")).sendKeys("Keegan" + Keys.ENTER);
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[2]/i")).click(); //close searching field
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[6]/i")).click(); // click Meeting topics searching field icon
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[1]/label/input")).sendKeys("Keegan" + Keys.ENTER); //fill Meeting topics searching field
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[2]/i")).click(); //close searching field
+	Wait(2000);
+	navisearch.clickStartTimeSearchIcon();
+	navisearch.setkStartTimeSearchInput();
+	navisearch.clickCloseSearchField();
+	navisearch.clickSubjectSearchIcon();
+	navisearch.setSubjectSearchInput();
+	navisearch.clickCloseSearchField();
+	navisearch.clickMeetingTopicsSearchIcon();
+	navisearch.setkMeetingTopicsSearchInput();
+	navisearch.clickCloseSearchField();
+	Wait(2000);
 	
 	driver.findElement(By.xpath("//div[@class='col center-vertical-container list-table-title']/i")).click(); //click on List icon
 	List<WebElement> List =driver.findElements(By.xpath("//body/div[4]/div/ion-popover-view/ion-content/div[1]/div/span")); //All elements on List.
@@ -126,9 +131,9 @@ public class Activities {
 	for(WebElement el : List) {
 	  System.out.print(el.getText()+ " ");
 	  }
-	 
+	driver.quit();
 	}
-//comment12
+
 
 	
 	public void Wait(int time){

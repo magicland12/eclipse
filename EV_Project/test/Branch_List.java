@@ -1,15 +1,13 @@
 package test;
 
-
 import java.util.concurrent.TimeUnit;
-
-
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-
 import org.openqa.selenium.firefox.FirefoxDriver;
+import login_other.LoginPage;
+import login_other.MainMenuSelect;
 
 public class Branch_List {
 	private static FirefoxDriver driver;
@@ -18,8 +16,8 @@ public class Branch_List {
 
 	@BeforeClass
 	public static void setUp() throws Exception {
-		
-		driver = new FirefoxDriver();
+	
+		driver = new FirefoxDriver();		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
@@ -28,22 +26,23 @@ public class Branch_List {
 	public void test() throws Exception {
 		driver.get(baseUrl);
 		
-	driver.findElement(By.xpath("//form [@id='login_form']/div[1]//input")).sendKeys("amazur@exadel.com");
-	driver.findElement(By.xpath("//form [@id='login_form']/div[2]//input")).sendKeys("lavandos");	
-	driver.findElement(By.xpath("//input[@id='loginBtn']")).click();	
-	driver.findElement(By.xpath("//div[@id='switch_to_landscape']")).click();
-	driver.findElement(By.xpath("//div[@id='mobile_sizes']/div[3]")).click();
+		LoginPage login=new LoginPage(driver);
+		login.typeUserName();
+		login.typePassword();
+		login.clickLoginButton();
+		login.resize_frame();
+		login.landscape_orientation();		
 	
 	
-	driver.switchTo().frame("frame_viewport");
-	driver.findElement(By.xpath("//ion-header-bar/div[1]/button[1]")).click();
-	//menu is opened
+	
+		driver.switchTo().frame("frame_viewport");
+		MainMenuSelect menu=new MainMenuSelect(driver);
+		menu.MainMenu();
+		//menu is opened
 	Wait(2000);
 	
-	driver.findElement(By.xpath("//ion-side-menu/div/ion-scroll/div[1]/div/a[3]")).click();
-	//branch_list is opened
+	driver.findElement(By.xpath("//ion-side-menu/div/ion-scroll/div[1]/div/a[3]")).click(); //branch_list is opened
 	
-
 	Wait(1000);
 	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[1]/span")).click(); //click on Firm Name
 	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[2]/span")).click(); //click on City
@@ -67,44 +66,7 @@ public class Branch_List {
 	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[2]/i")).click(); // close search field.
 	
 	System.out.println(firmname + " " + city);
-	
-	
-
-/* driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[1]/div[1]/div/span")).click(); // click on Name sorting column
-	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[1]/div[2]/div/span")).click(); // click on Firm Name sorting column
-	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[1]/div[3]/div/span")).click(); // click on Address,Phone sorting column
-	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[1]/div[4]/div/span")).click(); // click on YTD Sales sorting column
-	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[1]/div[5]/div/span")).click(); // click on Prior YR Sales sorting column
-	Wait(2000);
-	
-	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[1]/div[1]/div/i")).click();
-	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[2]/div[1]/label/input")).sendKeys("W" + Keys.ENTER);
-	
-	////ion-popover-view/ion-content/div[1]/div/span[4]
-	
-	String name = driver.findElement(By.xpath("//div[@class='list-table']/div[2]/ion-scroll/div[1]/div/div/div[1]/span")).getText(); // сохраняем Name
-	String firmName = driver.findElement(By.xpath("//div[@class='list-table']/div[2]/ion-scroll/div[1]/div/div/div[2]/span")).getText(); // сохраняем первую строку Branches 
-	
-	String address = driver.findElement(By.xpath("//div[@class='list-table']/div[2]/ion-scroll/div[1]/div/div/div[3]//div/span")).getText(); //save Address
-	String ytdSales = driver.findElement(By.xpath("//div[@class='list-table']/div[2]/ion-scroll/div[1]/div/div/div[4]/span")).getText(); // save YTD Sales
-	String priorYRSales = driver.findElement(By.xpath("//div[@class='list-table']/div[2]/ion-scroll/div[1]/div/div/div[5]/span")).getText(); // save prior yr sales
-	
-	
-//	String address = driver.findElement(By.xpath("//div[@class='col g-search-tabs-container']")).getText(); // сохраняем адрес
-	System.out.println(name + "\n"+"\n" + firmName + "\n"+"\n" + address + "\n" + "\n" + ytdSales + "\n" + "\n" + priorYRSales ); //выводим все 3 поля в консоли
-	
-	
-	
-	
-	
-/*	List<WebElement> Menu =driver.findElements(By.xpath("//ion-popover-view/ion-content/div[1]/div/span"));
-	for(WebElement me : Menu) {
-	 System.out.println(me.getText());
-	 
-	} // вывод списка меню
-	
-*/
-
+	driver.quit();
 	}
 	
 	
