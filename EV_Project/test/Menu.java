@@ -54,6 +54,7 @@ public class Menu {
 	menu.MainMenu();
 	driver.findElement(By.xpath("//ion-side-menu/div/ion-scroll/div[1]/div/a[11]")).click(); // select eLibrary Media
 	driver.quit();
+
 	}
 	
 

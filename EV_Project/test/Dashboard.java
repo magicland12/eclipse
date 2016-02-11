@@ -71,6 +71,7 @@ public class Dashboard {
 	for(WebElement el : SortBy) {
 	System.out.print(el.getText() + " ");
 		}
+	driver.quit();
 	}
 	
 	

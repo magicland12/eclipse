@@ -63,6 +63,7 @@ public class ELibrary_Media {
 		for(WebElement el : Other) {
 		System.out.print(el.getText() + " ");
 		}
+		driver.quit();
 	}
 	//	String fav = driver.findElement(By.xpath("//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[1]/div")).getText();
 //	String other = driver.findElement(By.xpath("//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[2]/div")).getText();

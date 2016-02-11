@@ -46,7 +46,7 @@ public class Dashboard_Activities {
 	 for(WebElement el : List) {
 	  System.out.print(Activity + " " + el.getText());}
 	 
-	 
+	 driver.quit();
 	 
 	//div[@class='stratch-vertically']/div[2]/div[2]/div/div[2]/ion-scroll/div[1]/div[1]/div
 	}

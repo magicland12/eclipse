@@ -63,9 +63,9 @@ public class Global_Search {
 	String text = driver.findElement(By.xpath("//div[@class='col g-search-tabs-container']")).getText(); // сохраняем Reps, Branches, Firms, Activities, Library
 	//String branches = driver.findElement(By.xpath("//div[@class='scroll']/div[@class='my-list-item'][1]/div")).getText(); // сохраняем первую строку Branches 
 	System.out.println(text + "\n"+"\n" + rep + "\n"+"\n"); //выводим все 3 поля в консоли
-	
+	driver.quit();
 	}
-	 
+	
 	
 	
 }

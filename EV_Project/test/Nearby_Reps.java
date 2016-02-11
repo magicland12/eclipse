@@ -44,7 +44,7 @@ public class Nearby_Reps {
 	
 
 	
-	driver.findElement(By.xpath("//div[@class='list-table-body']/ion-scroll[@class='stretch-vertically scroll-view ionic-scroll']/div[1]/div/div[1]/div[1]")).click(); //click on Demon McNight
+	driver.findElement(By.xpath("//div[@class='list-table-body search-closed']/ion-scroll/div[1]/div[1]/div/div[1]")).click(); //click on Demon McNight
 	Wait(2000);
 	driver.findElement(By.xpath("//div[@class='row center-vertical-container']/div[3]/span")).click(); // нажимаем на Options
 	
@@ -75,7 +75,7 @@ public class Nearby_Reps {
 //	String address = driver.findElement(By.xpath("//div[@class='col g-search-tabs-container']")).getText(); // сохраняем адрес
 	System.out.println(name + "\n"+"\n" + firmName + "\n"+"\n" + address + "\n" + "\n" + ytdSales + "\n" + "\n" + priorYRSales ); //выводим все 3 поля в консоли
 	
-	
+	driver.quit();
 	
 	
 	
