@@ -46,34 +46,11 @@ public class Firm_List {
 	//Wait(2000);
 	driver.findElement(By.xpath("//ion-side-menu/div/ion-scroll/div[1]/div/a[4]")).click();
 	Wait(2000);
+	
+	
 
 
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[1]")).click(); //-- click on Firm Name sorting icon
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[2]")).click();//-- click on 
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[3]")).click();//-- click on 
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[4]")).click();//-- click on Y
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[5]")).click();//-- click on 
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[6]")).click(); //click on
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[7]")).click(); //-- click on 
-	
-	
-	
-	
-	 List<WebElement> List =driver.findElements(By.xpath("//ion-scroll[@class='scroll-view ionic-scroll']/div[1]")); //Name, FirmName, YTD Sales, PriorYRSales
-	 for(WebElement el : List) {
-	  System.out.print(el.getText()+ " ");
-	  }
-	  
-/*	  Wait(2000);
-	  String addr = driver.findElement(By.xpath("//div[@class='rep-list-table-body']/ion-scroll/div[1]/div/div[1]/div[3]/div/div[1]/div/span")).getText(); //Address, upper row
-	  System.out.print(addr);
-	  
-	  List<WebElement> AdrDit =driver.findElements(By.xpath("//div[@class='rep-list-table-body']/ion-scroll/div[1]/div/div[1]/div[3]/div/div[2]/div/span[@class='rep-details rep-phone-prefix ng-binding']/span[2]")); //Address, lower row
-	  for(WebElement el : AdrDit) {
-	   System.out.print(el.getText() + " ");
-	   HELLO!
-	         }
-*/	driver.quit();
+	driver.quit();
 	}
 
 	

@@ -43,7 +43,7 @@ Wait(2000);
 //rep_list is opened
 	
 
-	driver.findElement(By.xpath("//div[@class='list-table-body']/ion-scroll[@class='stretch-vertically scroll-view ionic-scroll']/div[1]/div/div[1]/div[1]")).click(); //click on Demon McNight
+	driver.findElement(By.xpath("//div[@class='list-table-body search-closed']/ion-scroll/div[1]/div[1]/div/div[1]")).click(); //click on Demon McNight
 	driver.findElement(By.xpath("//div[@class='row no-margin info-container']/div[2]/div/div[1]/i")).click(); //click Reports icon
 	driver.findElement(By.xpath("//div[@class='popover-backdrop active']/div/ion-popover-view/ion-content/div[1]/div/span[2]")).click(); //select Rep Products
 	
@@ -58,7 +58,7 @@ Wait(2000);
 	List<WebElement> List =driver.findElements(By.xpath("/html/body/div[1]/ion-side-menus/ion-side-menu-content/div/div/ion-content/div/div[2]/div[2]/div/div[3]/div[2]/ion-scroll/div[1]/div[1]/div/div"));
 	for(WebElement el : List) {
 	 System.out.println(el.getText());
-	 
+	 driver.quit();
 	}
 	
 	

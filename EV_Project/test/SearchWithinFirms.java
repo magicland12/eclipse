@@ -75,7 +75,7 @@ public class SearchWithinFirms {
 	String firm_searching_result = driver.findElement(By.xpath("//div[@class='row no-padding list-table-container']/div/div[2]/ion-scroll/div[1]/div[1]/div[1]/div[1]/span")).getText();
 	
 	Assert.assertEquals(firm_searching_result, "Morgan Stanley");
-	
+	driver.quit();
 	}
 	 
 	public void Wait(int time){

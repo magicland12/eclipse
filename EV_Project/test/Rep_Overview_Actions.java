@@ -45,7 +45,7 @@ public class Rep_Overview_Actions {
 	
 
 	
-	driver.findElement(By.xpath("//div[@class='list-table-body']/ion-scroll[@class='stretch-vertically scroll-view ionic-scroll']/div[1]/div/div[1]/div[1]")).click(); //click on Demon McNight
+	driver.findElement(By.xpath("//div[@class='list-table-body search-closed']/ion-scroll/div[1]/div[1]/div/div[1]")).click(); //click on Demon McNight
 	Wait(2000);
 	driver.findElement(By.xpath("//div[@class='row center-vertical-container']/div[3]/span")).click(); // нажимаем на Options
 	
@@ -66,6 +66,7 @@ public class Rep_Overview_Actions {
 			System.out.println(me.getText());
 	 
 		}
+		driver.quit();
 	}
 
 	
