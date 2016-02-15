@@ -58,7 +58,7 @@ Wait(2000);
 	//Assert.assertEquals(reports, "Rep Products"); // check Firm Reps text presenting 
 	
 	driver.findElement(By.xpath("//ion-popover-view/ion-content/div[1]/div[1]/span[2]")).click(); //select Rep Products
-	Wait(2000);
+	Wait(5000);
 	
 	//driver.findElement(By.name("Rep Products")).click();
 	//ion-popover-view[@class='popover none ng-enter active ng-enter-active']/ion-content/div[1]/div/span[2]
@@ -66,13 +66,13 @@ Wait(2000);
 	//ion-popover-view/ion-content/div[1]/div/span[2]   this is new xPath
 	//ion-popover-view/ion-content[@class='scroll-content ionic-scroll']/div[1]/div/span[2]
 	//driver.findElement(By.xpath("//div[@class='row no-margin info-container']/div[2]/div/div[3]/div[1]/div[1]/div[1]/div[1]/span")).click(); // click Product sotring button
-	driver.findElement(By.xpath("//div[@class='rep-list-table-header']/div[1]/div[2]/div/div/div[1]")).click(); // click LBD sotring button
-	driver.findElement(By.xpath("//div[@class='rep-list-table-header']/div[1]/div[2]/div/div/div[2]")).click(); // click MTD sotring button
-	driver.findElement(By.xpath("//div[@class='rep-list-table-header']/div[1]/div[2]/div/div/div[3]")).click(); // click QTD sotring button
-	driver.findElement(By.xpath("//div[@class='rep-list-table-header']/div[1]/div[2]/div/div/div[4]")).click(); // click YTD sotring button
+	//driver.findElement(By.xpath("//div[@class='rep-list-table-header']/div[1]/div[2]/div/div/div[1]")).click(); // click LBD sotring button
+	//driver.findElement(By.xpath("//div[@class='rep-list-table-header']/div[1]/div[2]/div/div/div[2]")).click(); // click MTD sotring button
+	//driver.findElement(By.xpath("//div[@class='rep-list-table-header']/div[1]/div[2]/div/div/div[3]")).click(); // click QTD sotring button
+//	driver.findElement(By.xpath("//div[@class='rep-list-table-header']/div[1]/div[2]/div/div/div[4]")).click(); // click YTD sotring button
 	
 	
-	List<WebElement> List =driver.findElements(By.xpath("/html/body/div[1]/ion-side-menus/ion-side-menu-content/div/div/ion-content/div/div[2]/div[2]/div/div[3]/div[2]/ion-scroll/div[1]/div[1]/div/div"));
+	List<WebElement> List =driver.findElements(By.xpath("//ion-popover-view/ion-content/div[1]/div[1]"));
 	for(WebElement el : List) {
 	 System.out.println(el.getText());
 	 driver.quit();
