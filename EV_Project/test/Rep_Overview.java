@@ -3,9 +3,11 @@ package test;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -19,6 +21,7 @@ public class Rep_Overview {
 		
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
 	}
 
 	@Test
@@ -43,12 +46,26 @@ Wait(2000);
 //rep_list is opened
 	
 
-	driver.findElement(By.xpath("//div[@class='list-table-body search-closed']/ion-scroll/div[1]/div[1]/div/div[1]")).click(); //click on Demon McNight
+	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[1]/div[1]/div/i")).click(); // click Name search icon
+	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[2]/div[1]/label/input")).sendKeys("Damon" + Keys.ENTER);
+	driver.findElement(By.xpath("//div[@class='list-table-body search-opened']/ion-scroll/div[1]/div/div[1]/div[1]")).click(); //click on Demon McNight
+	Wait(2000);
 	driver.findElement(By.xpath("//div[@class='row no-margin info-container']/div[2]/div/div[1]/i")).click(); //click Reports icon
-	driver.findElement(By.xpath("//div[@class='popover-backdrop active']/div/ion-popover-view/ion-content/div[1]/div/span[2]")).click(); //select Rep Products
 	
 	
-	driver.findElement(By.xpath("//div[@class='row no-margin info-container']/div[2]/div/div[3]/div[1]/div[1]/div[1]/div[1]/span")).click(); // click Product sotring button
+	// check that Rep Products is available on Reports
+	//String reports = driver.findElement(By.xpath("//ion-popover-view[@class='popover none ng-enter active ng-enter-active']/ion-content/div[1]/div/span[2]")).getText(); //check whether it's really Firm Reps or not
+	//Assert.assertEquals(reports, "Rep Products"); // check Firm Reps text presenting 
+	
+	driver.findElement(By.xpath("//ion-popover-view/ion-content/div[1]/div[1]/span[2]")).click(); //select Rep Products
+	Wait(2000);
+	
+	//driver.findElement(By.name("Rep Products")).click();
+	//ion-popover-view[@class='popover none ng-enter active ng-enter-active']/ion-content/div[1]/div/span[2]
+	//div[@class='popover-backdrop active']/div/ion-popover-view/ion-content/div[1]/div/span[2] old one.
+	//ion-popover-view/ion-content/div[1]/div/span[2]   this is new xPath
+	//ion-popover-view/ion-content[@class='scroll-content ionic-scroll']/div[1]/div/span[2]
+	//driver.findElement(By.xpath("//div[@class='row no-margin info-container']/div[2]/div/div[3]/div[1]/div[1]/div[1]/div[1]/span")).click(); // click Product sotring button
 	driver.findElement(By.xpath("//div[@class='rep-list-table-header']/div[1]/div[2]/div/div/div[1]")).click(); // click LBD sotring button
 	driver.findElement(By.xpath("//div[@class='rep-list-table-header']/div[1]/div[2]/div/div/div[2]")).click(); // click MTD sotring button
 	driver.findElement(By.xpath("//div[@class='rep-list-table-header']/div[1]/div[2]/div/div/div[3]")).click(); // click QTD sotring button

@@ -59,18 +59,18 @@ public class Rep_list {
 	
 	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[1]/div[1]/div/i")).click(); // click Name search icon
 	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[2]/div[1]/label/input")).sendKeys("Damon" + Keys.ENTER);
-	driver.findElement(By.xpath("//div[@class='list-table-body']/ion-scroll[@class='stretch-vertically scroll-view ionic-scroll']/div[1]/div/div[1]/div[1]")).click(); //click on Demon McNight
+	driver.findElement(By.xpath("//div[@class='list-table-body search-opened']/ion-scroll/div[1]/div/div[1]/div[1]")).click(); //click on Demon McNight
 	driver.findElement(By.xpath("//ion-header-bar[@class='bar bar-header disable-user-behavior']/div[1]/button[2]")).click(); //back button
-	
+	//div[@class='list-table-body search-opened']/ion-scroll/div[1]/div/div[1]/div[1]
 	Wait(2000);
 	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[1]/div[2]/div/i")).click(); // click Firm Name search icon
 	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[2]/div[1]/label/input")).sendKeys("Susp" + Keys.ENTER);
-	driver.findElement(By.xpath("//div[@class='list-table-body']/ion-scroll[@class='stretch-vertically scroll-view ionic-scroll']/div[1]/div/div[1]/div[1]")).click(); //click on Demon McNight
+	driver.findElement(By.xpath("//div[@class='list-table-body search-opened']/ion-scroll/div[1]/div/div[1]/div[1]")).click(); //click on Demon McNight
 	driver.findElement(By.xpath("//ion-header-bar[@class='bar bar-header disable-user-behavior']/div[1]/button[2]")).click(); //back button
 	Wait(2000);
 	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[1]/div[3]/div/i")).click(); // click Address,Phone search icon
 	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[2]/div[1]/label/input")).sendKeys("222");
-	driver.findElement(By.xpath("//div[@class='list-table-body']/ion-scroll[@class='stretch-vertically scroll-view ionic-scroll']/div[1]/div/div[1]/div[1]")).click(); //click on Demon McNight
+	driver.findElement(By.xpath("//div[@class='list-table-body search-opened']/ion-scroll/div[1]/div/div[1]/div[1]")).click(); //click on Demon McNight
 	driver.findElement(By.xpath("//ion-header-bar[@class='bar bar-header disable-user-behavior']/div[1]/button[2]")).click(); //back button
 	
 	
@@ -82,7 +82,7 @@ public class Rep_list {
 	//div[@class='list-table']/div[1]/div/div[1]/div[1]/div/i
 	//div[@class='list-table']/div[1]/div/div[2]/div[1]/label/input
 	
-	 List<WebElement> List =driver.findElements(By.xpath("//div[@class='list-table-body']/ion-scroll[@class='stretch-vertically scroll-view ionic-scroll']/div[1]/div/div[1]/div")); //Name, FirmName, YTD Sales, PriorYRSales
+	 List<WebElement> List =driver.findElements(By.xpath("//div[@class='list-table-body search-closed']/ion-scroll/div[1]/div/div[1]")); //Name, FirmName, YTD Sales, PriorYRSales
 	 for(WebElement el : List) {
 	  System.out.print(el.getText()+ " ");
 	  }
