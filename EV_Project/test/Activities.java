@@ -180,14 +180,14 @@ public class Activities {
  // select All
 	
 	String all = driver.findElement(By.xpath("//div[@class='col center-vertical-container list-table-title']/span")).getText(); //check whether it's really Firm Reps or not
-	Wait(2000);
+	
 	Assert.assertEquals(all, "List: All"); // check This Week text presenting 
 	List<WebElement> List =driver.findElements(By.xpath("//div[@class='list-table-body search-closed']/ion-scroll/div[1]/div[1]/div")); //All elements on List.
 	
 	for(WebElement el : List) {
 	  System.out.print(el.getText()+ " ");
 	  }
-	//driver.quit();
+	driver.quit();
 	}
 
 

@@ -19,7 +19,7 @@ public class ELibrary_Media {
 	public static void setUp() throws Exception {
 		// driver = new ChromeDriver();
 		driver = new FirefoxDriver();
-		// driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
@@ -65,52 +65,7 @@ public class ELibrary_Media {
 		}
 		driver.quit();
 	}
-	//	String fav = driver.findElement(By.xpath("//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[1]/div")).getText();
-//	String other = driver.findElement(By.xpath("//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[2]/div")).getText();
-//	String all_recs = (fav + other);
-//	System.out.println(all_recs);
-	
-	
-	//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[2]/div[1] - second element
-	//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[1]/div/p // user4 Favourites
-	//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[2]/div/p // all other fields
-	
-	//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[2]/div[1]/p // each sub element of all
-	
-	
-	
-	/*
-	 List<WebElement> List =driver.findElements(By.xpath("//div[@class='rep-list-table-body']/ion-scroll/div[1]/div/div[1]/div/span")); //Name, FirmName, YTD Sales, PriorYRSales
-	 for(WebElement el : List) {
-	  System.out.print(el.getText()+ " ");
 
-	  
-	        }
-	  
-	  Wait(2000);
-	  String addr = driver.findElement(By.xpath("//div[@class='rep-list-table-body']/ion-scroll/div[1]/div/div[1]/div[3]/div/div[1]/div/span")).getText(); //Address, upper row
-	  System.out.print(addr);
-	  
-	  List<WebElement> AdrDit =driver.findElements(By.xpath("//div[@class='rep-list-table-body']/ion-scroll/div[1]/div/div[1]/div[3]/div/div[2]/div/span[@class='rep-details rep-phone-prefix ng-binding']/span[2]")); //Address, lower row
-	  for(WebElement el : AdrDit) {
-	   System.out.print(el.getText() + " ");
-	         }
-	}
-
-
-
-/*driver.findElement(By.xpath("//ion-header-bar/div[1]/button[1]")).click();
-driver.findElement(By.xpath("//ion-side-menus/ion-side-menu/div/ion-scroll/div[1]/div/a[3]/p")).click();
-driver.findElement(By.xpath("//ion-header-bar/div[1]/button[1]")).click();
-driver.findElement(By.xpath("//ion-side-menus/ion-side-menu/div/ion-scroll/div[1]/div/a[4]/p")).click();
-driver.findElement(By.xpath("//ion-header-bar/div[1]/button[1]")).click();
-driver.findElement(By.xpath("//ion-side-menus/ion-side-menu/div/ion-scroll/div[1]/div/a[5]/p")).click();
-String text = driver.findElement(By.xpath("//div[@class='scroll']/div/div[1]/div[1]/span")).getText();
-System.out.println(text);
-
-driver.findElement(By.xpath("//ion-side-menus/ion-side-menu/div/ion-scroll/div[1]/div/a[2]/p")).click();
-
-*/
 	
 	public void Wait(int time){
 		   try {

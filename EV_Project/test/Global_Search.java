@@ -41,8 +41,7 @@ public class Global_Search {
 	
 	String rep = driver.findElement(By.xpath("//div[@class='row no-padding list-table-container']/div/div[2]/ion-scroll/div[1]/div[1]/div[1]")).getText(); // сохраняем первую строку Reps 
 	
-	//div[@class='row no-padding list-table-container']/div/div[2]/ion-scroll/div[1]/div[1]/div[1] // first row Reps
-	//div[@class='col g-search-tabs-container'] - 1-st row
+
 	
 	
 	driver.findElement(By.xpath("//div[@class='g-search-grid']/div[2]/div/button[2]")).click();

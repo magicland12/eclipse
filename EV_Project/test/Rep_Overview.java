@@ -59,18 +59,7 @@ Wait(2000);
 	
 	driver.findElement(By.xpath("//ion-popover-view/ion-content/div[1]/div[1]/span[2]")).click(); //select Rep Products
 	Wait(5000);
-	
-	//driver.findElement(By.name("Rep Products")).click();
-	//ion-popover-view[@class='popover none ng-enter active ng-enter-active']/ion-content/div[1]/div/span[2]
-	//div[@class='popover-backdrop active']/div/ion-popover-view/ion-content/div[1]/div/span[2] old one.
-	//ion-popover-view/ion-content/div[1]/div/span[2]   this is new xPath
-	//ion-popover-view/ion-content[@class='scroll-content ionic-scroll']/div[1]/div/span[2]
-	//driver.findElement(By.xpath("//div[@class='row no-margin info-container']/div[2]/div/div[3]/div[1]/div[1]/div[1]/div[1]/span")).click(); // click Product sotring button
-	//driver.findElement(By.xpath("//div[@class='rep-list-table-header']/div[1]/div[2]/div/div/div[1]")).click(); // click LBD sotring button
-	//driver.findElement(By.xpath("//div[@class='rep-list-table-header']/div[1]/div[2]/div/div/div[2]")).click(); // click MTD sotring button
-	//driver.findElement(By.xpath("//div[@class='rep-list-table-header']/div[1]/div[2]/div/div/div[3]")).click(); // click QTD sotring button
-//	driver.findElement(By.xpath("//div[@class='rep-list-table-header']/div[1]/div[2]/div/div/div[4]")).click(); // click YTD sotring button
-	
+
 	
 	List<WebElement> List =driver.findElements(By.xpath("//ion-popover-view/ion-content/div[1]/div[1]"));
 	for(WebElement el : List) {
@@ -78,34 +67,7 @@ Wait(2000);
 	 driver.quit();
 	}
 	
-	
-//	driver.findElement(By.xpath("//div[@class='rep-info-grid']/div[1]/div[3]/p")).click(); // нажимаем на меню
-	
-	/*	List<WebElement> Menu =driver.findElements(By.xpath("//div[@class='popover-backdrop active']/div/ion-popover-view"));
-	for(WebElement me : Menu) {
-	 System.out.println(me.getText());
-	} // вывод списка меню
-	
-	//div[@class='rep-report-body-container no-padding']/ion-scroll/div[@class='scroll']//div[1] вывод всех строк Rep Products
-	//div[@class='popover-backdrop active']/div/ion-popover-view - вывод первой строки Rep Products
-	 * /html/body/div[1]/ion-side-menus/ion-side-menu-content/div/div/ion-content/div/div[2]/div[2]/div/div[3]/div[2]/ion-scroll/div[1]/div[1]/div/div - вывод первой строки Rep Products
-	 */
-/*	 // вывод строки Rep Products
-	 
-	/* 
-	 
-	 
-	 //Rep Products one row is printed
-	       
-	/*String addr = driver.findElement(By.xpath("//div[@class='rep-list-grid']/div[2]/div/div/div[2]/ion-scroll/div[1]/div/div[@class='row item'][1]/div[3]/div/div[1]//span")).getText();
-	System.out.println(addr);
-	List<WebElement> AdrDit =driver.findElements(By.xpath("//div[@class='rep-list-grid']/div[2]/div/div/div[2]/ion-scroll/div[1]/div/div[@class='row item'][1]/div[3]/div/div[2]//span"));
-	for(WebElement el : AdrDit) {
-		 System.out.print(el.getText() + " ");
-		       }
 
-
-*/
 	}
 	public void Wait(int time){
 		   try {

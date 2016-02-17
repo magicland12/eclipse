@@ -20,6 +20,7 @@ public class Rep_Overview_Actions {
 		
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
 	}
 
 	@Test
@@ -50,16 +51,7 @@ public class Rep_Overview_Actions {
 	driver.findElement(By.xpath("//div[@class='row center-vertical-container']/div[3]/span")).click(); // нажимаем на Options
 	
 	
-	
-//	driver.findElement(By.xpath("//div[@class='popover-backdrop active']/div/ion-popover-view/ion-content/div[1]/div[@class='list']/span[4]")).click(); // click Nearby Reps
-//	driver.findElement(By.xpath("//ion-header-bar[@class='bar bar-header disable-user-behavior']/div[1]/button[2]")).click(); // click back button
-//	driver.findElement(By.xpath("//div[@class='rep-info-grid']/div[1]/div[3]/p")).click(); // нажимаем на меню
-	
-	
-	//div[@class='rep-info-grid']/div[1]/div[3]/p
-	//div[@class='rep-info-grid']/div[1]/div[3]/p
-	//ion-header-bar[@class='bar bar-header disable-user-behavior']/div[1]/button[2] // back button
-	//div[@class='popover-backdrop active']/div/ion-popover-view/ion-content/div[1]/div[@class='list']/span
+
 	
 	List<WebElement> Menu =driver.findElements(By.xpath("//ion-popover-view/ion-content/div[1]/div/span"));
 		for(WebElement me : Menu) {

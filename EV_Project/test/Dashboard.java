@@ -75,63 +75,7 @@ public class Dashboard {
 	}
 	
 	
-	
-//	driver.findElement(By.xpath("//ion-content[@class='scroll-content ionic-scroll']/div[1]/div/span[6]")).click(); //select Creaing Date icon
-//	driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[3]/div[2]/div/div[1]/div/div/div[3]/span")).click(); //click on SortBy
-	
-//	driver.findElement(By.xpath("//ion-content[@class='scroll-content ionic-scroll']/div[1]/div/span[7]")).click(); //select Posting Date icon
-//	driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[3]/div[2]/div/div[1]/div/div/div[3]/span")).click(); //click on SortBy
-	
-	
-//	Wait(2000);
-	
 
-/*	
-		String fav =driver.findElement(By.xpath("//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[1]/div")).getText(); 
-		System.out.println(fav);
-	 
-	 
-		List<WebElement> Other =driver.findElements(By.xpath("//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[2]/div")); //Address, lower row
-		for(WebElement el : Other) {
-		System.out.print(el.getText() + " ");
-		}
-	}
-	//	String fav = driver.findElement(By.xpath("//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[1]/div")).getText();
-//	String other = driver.findElement(By.xpath("//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[2]/div")).getText();
-//	String all_recs = (fav + other);
-//	System.out.println(all_recs);
-	//JIIIIIII
-	
-	//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[2]/div[1] - second element
-	//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[1]/div/p // user4 Favourites
-	//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[2]/div/p // all other fields
-	
-	//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[2]/div[1]/p // each sub element of all
-	
-	
-	
-	/*
-	 List<WebElement> List =driver.findElements(By.xpath("//div[@class='rep-list-table-body']/ion-scroll/div[1]/div/div[1]/div/span")); //Name, FirmName, YTD Sales, PriorYRSales
-	 for(WebElement el : List) {
-	  System.out.print(el.getText()+ " ");
-
-	  
-	        }
-	  
-	  Wait(2000);
-	  String addr = driver.findElement(By.xpath("//div[@class='rep-list-table-body']/ion-scroll/div[1]/div/div[1]/div[3]/div/div[1]/div/span")).getText(); //Address, upper row
-	  System.out.print(addr);
-	  
-	  List<WebElement> AdrDit =driver.findElements(By.xpath("//div[@class='rep-list-table-body']/ion-scroll/div[1]/div/div[1]/div[3]/div/div[2]/div/span[@class='rep-details rep-phone-prefix ng-binding']/span[2]")); //Address, lower row
-	  for(WebElement el : AdrDit) {
-	   System.out.print(el.getText() + " ");
-	         }
-	}
-
-
-
-
-*/
 	
 	public void Wait(int time){
 		   try {

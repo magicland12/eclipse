@@ -88,15 +88,7 @@ public class Firm_Overview {
 	
 	
 	driver.findElement(By.xpath("//div[@class='row no-padding no-margin']/div[2]/div/div/div[1]/div/i")).click(); //click Reports ICON
-/*	driver.findElement(By.xpath("html/body/div[4]/div/ion-popover-view/ion-content/div[1]/div/span[2]")).click(); //select Firms Sales by LOB
-//	Wait(1000);
-//	driver.findElement(By.xpath("//div[@class='col section firm-info-right-section']/div/div/div[3]/div/div/div/div/div/div[1]/span")).click(); //click 'LOB' sorting icon
-////ion-popover-view[@class='popover none ng-enter active ng-enter-active']/ion-content/div[1]/div/span[2] new xPath
-	}
-/*	driver.findElement(By.xpath("//div[@class='col section firm-info-right-section']/div/div/div[3]/div/div/div/div/div/div[1]/span")).click(); //click 'LOB' sorting icon
-	driver.findElement(By.xpath("//div[@class='col section firm-info-right-section']/div/div/div[3]/div/div/div/div/div/div[2]/span")).click(); //click '$' sorting icon
-
-*/	
+	
 	String selected_firm = driver.findElement(By.xpath("//div[@class='col section firm-info-left-section']/div[1]/div/div[1]/div/span")).getText();
 	
 	Assert.assertEquals(selected_firm, "Ameriprise Financial Services");
@@ -109,13 +101,7 @@ public class Firm_Overview {
 	 	}
 	 System.out.println(found_name + "\n" + found_phone + "\n" + portfolio );
 	
-	//div[@class='col section firm-info-left-section']/div[1]/div/div[1]/div/span Ameriprise Financial Services only
-	//div[@class='col section firm-info-left-section']/div[1]/div/div/div // Ameriprise Financial Services with Address and Phone
 	
-	//div[@class='row no-padding no-margin']/div[1]/div[2]/div/div[2]/div/div/div[1]/div/div[1]/div[1]/span   Name sorting Icon
-	//div[@class='row no-padding no-margin']/div[1]/div[2]/div/div[2]//div[1]/div/div[1]/div[1]/span All Firm Reps Names
-	//div[@class='row no-padding no-margin']/div[1]/div[2]/div/div[2]/div/div/div[1]/div/div[2]/div[2]/i close searching field icon
-
 
 	driver.quit();
 	}
@@ -128,5 +114,5 @@ public class Firm_Overview {
 		    e.printStackTrace();
 		   }
 		 }
-		 
+
 }

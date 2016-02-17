@@ -75,13 +75,6 @@ public class Rep_list {
 	
 	
 	
-	
-	
-	
-	//ion-header-bar[@class='bar bar-header disable-user-behavior']/div[1]/button[2] -BackButton
-	//div[@class='list-table']/div[1]/div/div[1]/div[1]/div/i
-	//div[@class='list-table']/div[1]/div/div[2]/div[1]/label/input
-	
 	 List<WebElement> List =driver.findElements(By.xpath("//div[@class='list-table-body search-closed']/ion-scroll/div[1]/div/div[1]")); //Name, FirmName, YTD Sales, PriorYRSales
 	 for(WebElement el : List) {
 	  System.out.print(el.getText()+ " ");

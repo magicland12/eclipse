@@ -48,47 +48,10 @@ public class Dashboard_Activities {
 	 
 	 driver.quit();
 	 
-	//div[@class='stratch-vertically']/div[2]/div[2]/div/div[2]/ion-scroll/div[1]/div[1]/div
+	
 	}
 	
 	
-	
-	
-	
-	
-	
-	/*
-	 List<WebElement> List =driver.findElements(By.xpath("//div[@class='rep-list-table-body']/ion-scroll/div[1]/div/div[1]/div/span")); //Name, FirmName, YTD Sales, PriorYRSales
-	 for(WebElement el : List) {
-	  System.out.print(el.getText()+ " ");
-
-	  
-	        }
-	  
-	  Wait(2000);
-	  String addr = driver.findElement(By.xpath("//div[@class='rep-list-table-body']/ion-scroll/div[1]/div/div[1]/div[3]/div/div[1]/div/span")).getText(); //Address, upper row
-	  System.out.print(addr);
-	  
-	  List<WebElement> AdrDit =driver.findElements(By.xpath("//div[@class='rep-list-table-body']/ion-scroll/div[1]/div/div[1]/div[3]/div/div[2]/div/span[@class='rep-details rep-phone-prefix ng-binding']/span[2]")); //Address, lower row
-	  for(WebElement el : AdrDit) {
-	   System.out.print(el.getText() + " ");
-	         }
-	}
-
-
-
-/*driver.findElement(By.xpath("//ion-header-bar/div[1]/button[1]")).click();
-driver.findElement(By.xpath("//ion-side-menus/ion-side-menu/div/ion-scroll/div[1]/div/a[3]/p")).click();
-driver.findElement(By.xpath("//ion-header-bar/div[1]/button[1]")).click();
-driver.findElement(By.xpath("//ion-side-menus/ion-side-menu/div/ion-scroll/div[1]/div/a[4]/p")).click();
-driver.findElement(By.xpath("//ion-header-bar/div[1]/button[1]")).click();
-driver.findElement(By.xpath("//ion-side-menus/ion-side-menu/div/ion-scroll/div[1]/div/a[5]/p")).click();
-String text = driver.findElement(By.xpath("//div[@class='scroll']/div/div[1]/div[1]/span")).getText();
-System.out.println(text);
-
-driver.findElement(By.xpath("//ion-side-menus/ion-side-menu/div/ion-scroll/div[1]/div/a[2]/p")).click();
-
-*/
 	
 	public void Wait(int time){
 		   try {
