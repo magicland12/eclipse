@@ -46,11 +46,11 @@ public class Nearby_Reps {
 	
 	driver.findElement(By.xpath("//div[@class='list-table-body search-closed']/ion-scroll/div[1]/div[1]/div/div[1]")).click(); //click on Demon McNight
 	Wait(2000);
-	driver.findElement(By.xpath("//div[@class='row center-vertical-container']/div[3]/span")).click(); // íàæèìàåì íà Options
+	driver.findElement(By.xpath("//div[@class='row center-vertical-container']/div[3]/span")).click(); // íàæèìàåì íà Actions
 	
 	Wait(2000);
 
-	driver.findElement(By.xpath("//ion-popover-view/ion-content/div[1]/div/span[4]")).click(); // click Nearby Reps
+	driver.findElement(By.xpath("//span[text()='Nearby Reps']")).click(); // click Nearby Reps
 	Wait(2000);
 	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[1]/div[1]/div/span")).click(); // click on Name sorting column
 	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[1]/div[2]/div/span")).click(); // click on Firm Name sorting column
@@ -60,7 +60,7 @@ public class Nearby_Reps {
 	Wait(2000);
 	
 	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[1]/div[1]/div/i")).click();
-	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[2]/div[1]/label/input")).sendKeys("W" + Keys.ENTER);
+	driver.findElement(By.xpath("//div[@class='list-table']/div[1]/div/div[2]/div[1]/label/input")).sendKeys("M" + Keys.ENTER);
 	
 	////ion-popover-view/ion-content/div[1]/div/span[4]
 	

@@ -3,7 +3,7 @@ package test;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -47,6 +47,7 @@ public class Activities {
 	ActivitySortSearchIcons navisearch=new ActivitySortSearchIcons(driver);
 	//Wait(2000);
 	driver.findElement(By.xpath("//ion-side-menu/div/ion-scroll/div[1]/div/a[6]")).click(); // activities page is opened
+	Wait(2000);
 	
 	navisearch.clickStartingTime();
 	navisearch.clickStartingTime();
@@ -71,8 +72,17 @@ public class Activities {
 	navisearch.clickCloseSearchField();
 
 	
+	
+	
 	driver.findElement(By.xpath("//div[@class='col center-vertical-container list-table-title']/i")).click(); //click on List icon
-	driver.findElement(By.xpath("//body/div[3]/div/ion-popover-view/ion-content/div[1]/div/span[3]")).click(); // select This Week
+	Wait(2000);
+	driver.findElement(By.xpath("//span[text()='This Month']")).click(); 
+	
+	// select This Month
+	
+	Wait(2000);
+	String this_month = driver.findElement(By.xpath("//div[@class='col center-vertical-container list-table-title']/span")).getText(); //check whether it's really Firm Reps or not
+	Assert.assertEquals(this_month, "List: This Month"); // check This Month text presenting 
 	
 	navisearch.clickStartingTime();
 	navisearch.clickStartingTime();
@@ -87,7 +97,7 @@ public class Activities {
 	navisearch.clickMeetingTopics();
 	
 	Wait(2000);
-	navisearch.clickStartTimeSearchIcon();
+/*	navisearch.clickStartTimeSearchIcon();
 	navisearch.setkStartTimeSearchInput();
 	navisearch.clickCloseSearchField();
 	navisearch.clickSubjectSearchIcon();
@@ -96,10 +106,16 @@ public class Activities {
 	navisearch.clickMeetingTopicsSearchIcon();
 	navisearch.setkMeetingTopicsSearchInput();
 	navisearch.clickCloseSearchField();
-	
+*/	
 	
 	driver.findElement(By.xpath("//div[@class='col center-vertical-container list-table-title']/i")).click(); //click on List icon
-	driver.findElement(By.xpath("//body/div[3]/div/ion-popover-view/ion-content/div[1]/div/span[4]")).click(); // Today
+	Wait(2000);
+	driver.findElement(By.xpath("//span[text()='This Week']")).click(); 
+	
+	Wait(2000);
+	String week = driver.findElement(By.xpath("//div[@class='col center-vertical-container list-table-title']/span")).getText(); //check whether it's really Firm Reps or not
+	Wait(2000);
+	Assert.assertEquals(week, "List: This Week"); // check This Week text presenting 
 	
 	navisearch.clickStartingTime();
 	navisearch.clickStartingTime();
@@ -114,6 +130,38 @@ public class Activities {
 	navisearch.clickMeetingTopics();
 	
 	Wait(2000);
+/*	navisearch.clickStartTimeSearchIcon();
+	navisearch.setkStartTimeSearchInput();
+	navisearch.clickCloseSearchField();
+	navisearch.clickSubjectSearchIcon();
+	navisearch.setSubjectSearchInput();
+	navisearch.clickCloseSearchField();
+	navisearch.clickMeetingTopicsSearchIcon();
+	navisearch.setkMeetingTopicsSearchInput();
+	navisearch.clickCloseSearchField();
+	Wait(2000);
+*/	
+	driver.findElement(By.xpath("//div[@class='col center-vertical-container list-table-title']/i")).click(); //click on List icon
+	Wait(2000);
+	driver.findElement(By.xpath("//span[text()='Today']")).click(); 
+	Wait(2000);
+	String today = driver.findElement(By.xpath("//div[@class='col center-vertical-container list-table-title']/span")).getText(); //check whether it's really Firm Reps or not
+	Wait(2000);
+	Assert.assertEquals(today, "List: Today"); // check This Week text presenting 
+	
+	navisearch.clickStartingTime();
+	navisearch.clickStartingTime();
+	navisearch.clickPriority();
+	navisearch.clickPriority();
+	navisearch.clickSubject();
+	navisearch.clickSubject();
+	navisearch.clickLOBs();
+	navisearch.clickLOBs();
+	navisearch.clickProducts();
+	navisearch.clickProducts();
+	navisearch.clickMeetingTopics();
+	
+/*	Wait(2000);
 	navisearch.clickStartTimeSearchIcon();
 	navisearch.setkStartTimeSearchInput();
 	navisearch.clickCloseSearchField();
@@ -125,13 +173,21 @@ public class Activities {
 	navisearch.clickCloseSearchField();
 	Wait(2000);
 	
+*/	
 	driver.findElement(By.xpath("//div[@class='col center-vertical-container list-table-title']/i")).click(); //click on List icon
-	List<WebElement> List =driver.findElements(By.xpath("//body/div[4]/div/ion-popover-view/ion-content/div[1]/div/span")); //All elements on List.
+	Wait(2000);
+	driver.findElement(By.xpath("//span[text()='All']")).click(); 
+ // select All
+	
+	String all = driver.findElement(By.xpath("//div[@class='col center-vertical-container list-table-title']/span")).getText(); //check whether it's really Firm Reps or not
+	Wait(2000);
+	Assert.assertEquals(all, "List: All"); // check This Week text presenting 
+	List<WebElement> List =driver.findElements(By.xpath("//div[@class='list-table-body search-closed']/ion-scroll/div[1]/div[1]/div")); //All elements on List.
 	
 	for(WebElement el : List) {
 	  System.out.print(el.getText()+ " ");
 	  }
-	driver.quit();
+	//driver.quit();
 	}
 
 

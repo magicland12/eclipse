@@ -60,7 +60,7 @@ public class Dashboard {
 
 	driver.findElement(By.xpath("//ion-content[@class='scroll-content ionic-scroll']/div[1]/div/span[3]")).click(); //select Firm Name icon
 	driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[3]/div[2]/div/div[1]/div/div/div[3]/span")).click(); //click on SortBy
-
+	Wait(2000);
 	driver.findElement(By.xpath("//ion-content[@class='scroll-content ionic-scroll']/div[1]/div/span[4]")).click(); //select Fund Name icon
 	driver.findElement(By.xpath("//div[@class='stratch-vertically']/div[3]/div[2]/div/div[1]/div/div/div[3]/span")).click(); //click on SortBy
 
