@@ -14,7 +14,7 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({ Activities.class, Branch_List.class, Dashboard.class, Dashboard_Activities.class, ELibrary_Media.class,
 		Firm_List.class, Firm_Overview.class, Global_Search.class, Menu.class, Nearby_Reps.class, Rep_list.class,
-		Rep_Overview.class, Rep_Overview_Actions.class, SearchWithinFirms.class, Fund_Data.class })
+		Rep_Overview.class, Rep_Overview_Action.class, SearchWithinFirms.class, Fund_Data.class })
 public class AllTests {
 
 }
