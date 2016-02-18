@@ -1,10 +1,15 @@
 package test;
 
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import login_other.LoginPage;
@@ -38,8 +43,20 @@ public class Menu {
 	
 	driver.switchTo().frame("frame_viewport");
 	MainMenuSelect menu=new MainMenuSelect(driver);
+	
+	
 	menu.MainMenu();
 	//menu is opened
+	
+	
+	Wait(2000);
+	TakesScreenshot ts=(TakesScreenshot)driver;
+	File source=ts.getScreenshotAs(OutputType.FILE);
+	FileUtils.copyFile(source,new File("./ScreenShots/Menu/menu.png"));
+	
+	System.out.println("Screenshot captured!");
+	
+	
 	driver.findElement(By.xpath("//ion-side-menu/div/ion-scroll/div[1]/div/a[1]")).click();
 	menu.MainMenu();
 	driver.findElement(By.xpath("//ion-side-menu/div/ion-scroll/div[1]/div/a[2]")).click(); //// select Rep List

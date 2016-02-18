@@ -1,13 +1,17 @@
 package test;
 
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import login_other.LoginPage;
 
@@ -62,7 +66,12 @@ public class SearchWithinFirms {
 	driver.findElement(By.xpath("//div[@class='g-search-grid']/div[5]/div/div[1]/div/div[6]")).click();//click 1-st sorting tab
 	driver.findElement(By.xpath("//div[@class='g-search-grid']/div[5]/div/div[1]/div/div[7]")).click();//click 1-st sorting tab
 	
+	Wait(2000);
+	TakesScreenshot ts=(TakesScreenshot)driver;
+	File source=ts.getScreenshotAs(OutputType.FILE);
+	FileUtils.copyFile(source,new File("./ScreenShots/SearchWithinFirms/searchwithinfirms.png"));
 	
+	System.out.println("Screenshot captured!");
 	
 	String firms = driver.findElement(By.xpath("//div[@class='row no-padding list-table-container']/div/div[2]/ion-scroll/div[1]/div[1]/div[1]")).getText(); // сохраняем первую строку Firms
 	
