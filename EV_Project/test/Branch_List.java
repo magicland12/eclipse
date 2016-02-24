@@ -45,7 +45,7 @@ public class Branch_List {
 	
 	Wait(1000);
 	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[1]/span")).click(); //click on Firm Name
-	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[2]/span")).click(); //click on City
+	/*driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[2]/span")).click(); //click on City
 	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[3]/span")).click(); //click on State
 	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[4]/span")).click(); //click on Address,Phone
 	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[5]/span")).click(); //click on YTD Sales
@@ -56,7 +56,7 @@ public class Branch_List {
 	
 	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[1]/i")).click(); //click on First Name searching icon
 	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[1]/label/input")).sendKeys("Morgan" + Keys.ENTER); // set
-	String firmname = driver.findElement(By.xpath("//ion-content/div/div[3]/div/div/div[2]/ion-scroll/div[1]/div[1]/div[1]/div[1]/span")).getText();
+	//String firmname = driver.findElement(By.xpath("//ion-content/div/div[3]/div/div/div[2]/ion-scroll/div[1]/div[1]/div[1]/div[1]/span")).getText();
 	driver.findElement(By.xpath("//div[@class='list-table-header']/div[2]/div[2]/i")).click(); //close search field
 	driver.findElement(By.xpath("//div[@class='list-table-header']/div[1]/div[2]/i")).click();
 	
@@ -67,6 +67,7 @@ public class Branch_List {
 	
 	System.out.println(firmname + " " + city);
 	driver.quit();
+	*/
 	}
 	
 	

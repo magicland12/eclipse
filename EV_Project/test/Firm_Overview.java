@@ -86,7 +86,7 @@ public class Firm_Overview {
 	String portfolio = driver.findElement(By.xpath("//div[@class='row no-padding no-margin']/div[2]/div/div/div[2]/div/div/div[2]/ion-scroll/div[1]/div/div/div[1]/span")).getText(); //save found Portfolio %Boston%
 	driver.findElement(By.xpath("//div[@class='col section firm-info-right-section']/div/div/div[2]/div/div/div[1]/div/div[2]/div[2]/i")).click(); //close searching field
 	
-	
+	Wait(2000);
 	driver.findElement(By.xpath("//div[@class='row no-padding no-margin']/div[2]/div/div/div[1]/div/i")).click(); //click Reports ICON
 	
 	String selected_firm = driver.findElement(By.xpath("//div[@class='col section firm-info-left-section']/div[1]/div/div[1]/div/span")).getText();

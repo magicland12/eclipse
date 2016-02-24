@@ -43,7 +43,7 @@ public class ELibrary_Media {
 	driver.findElement(By.xpath("//ion-header-bar/div[1]/button[1]")).click(); // select menu
 
 	
-	driver.findElement(By.xpath("//ion-side-menu/div/ion-scroll/div[1]/div/a[11]")).click(); // select eLibrary Media
+	driver.findElement(By.xpath("//ion-side-menu/div/ion-scroll/div[1]/div/a[7]")).click(); // select eLibrary Media
 	Wait(2000);
 	
 	driver.findElement(By.xpath("//div[@class='no-margin']/ion-scroll[@class='scroll-view ionic-scroll']/div/div[2]/div[1]")).click();

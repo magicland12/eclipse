@@ -60,13 +60,12 @@ public class Activities {
 	navisearch.clickProducts();
 	navisearch.clickProducts();
 	navisearch.clickMeetingTopics();
-	Wait(2000);
 	navisearch.clickStartTimeSearchIcon();
 	navisearch.setkStartTimeSearchInput();
-	navisearch.clickCloseSearchField();
-	navisearch.clickSubjectSearchIcon();
-	navisearch.setSubjectSearchInput();
-	navisearch.clickCloseSearchField();
+	//navisearch.clickCloseSearchField();
+	//navisearch.clickSubjectSearchIcon();
+	//navisearch.setSubjectSearchInput();
+	//navisearch.clickCloseSearchField();
 	navisearch.clickMeetingTopicsSearchIcon();
 	navisearch.setkMeetingTopicsSearchInput();
 	navisearch.clickCloseSearchField();
